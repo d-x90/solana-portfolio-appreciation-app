@@ -36,6 +36,7 @@
       grid-template-rows: 1fr 1fr 1fr;
 
       .solana-logo {
+        z-index: 2;
         cursor: pointer;
 
         grid-column: 2;
