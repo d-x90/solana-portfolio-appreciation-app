@@ -1,0 +1,93 @@
+@import 'atropos/scss';
+
+.core {
+  width: 65vh;
+  height: 65vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 577px) {
+    width: 95vw;
+    height: 95vw;
+  }
+
+  @media screen and (max-width: 472px) {
+    margin-top: 10%;
+  }
+
+  > .my-atropos {
+    width: 100%;
+    height: 100%;
+
+    .atropos-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .moving-container {
+      width: 80%;
+      height: 80%;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+
+      .solana-logo {
+        cursor: pointer;
+
+        grid-column: 2;
+        grid-row: 2;
+
+        width: 100%;
+        height: 100%;
+
+        background: url('/assets/images/solana-logo.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        transition: transform ease-in 0.3s;
+      }
+
+      .solana-ring {
+        pointer-events: none;
+        grid-column: 2;
+        grid-row: 2;
+
+        position: relative;
+
+        background-image: url('/assets/images/solana-ring.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        &.inner {
+          width: 170%;
+          height: 170%;
+
+          top: -32%;
+          left: -32%;
+        }
+
+        &.middle {
+          width: 220%;
+          height: 220%;
+
+          top: -56%;
+          left: -57%;
+        }
+
+        &.outer {
+          width: 280%;
+          height: 280%;
+
+          top: -86%;
+          left: -86%;
+        }
+      }
+    }
+  }
+}
