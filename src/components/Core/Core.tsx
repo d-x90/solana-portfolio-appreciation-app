@@ -12,7 +12,15 @@ const Core = () => {
         className="my-atropos"
       >
         <div className="moving-container">
-          <div data-atropos-offset="25" className="solana-logo" onClick={() => sendSolToWallet(0.1)}></div>
+          <div
+            data-atropos-offset="25"
+            className="solana-logo"
+            onClick={() =>
+              sendSolToWallet(
+                Number(process.env.REACT_APP_APPRECIATION_VALUE_IN_SOL) || 0.1
+              )
+            }
+          ></div>
           <div data-atropos-offset="10" className="solana-ring inner"></div>
           <div data-atropos-offset="5" className="solana-ring middle"></div>
           <div data-atropos-offset="1" className="solana-ring outer"></div>
