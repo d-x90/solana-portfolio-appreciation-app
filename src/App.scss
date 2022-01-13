@@ -11,8 +11,13 @@
 
   > section.main {
     height: calc(92vh - 5px);
+
     @media screen and (max-height: 750px) {
-      height: calc(92vh - 5px);
+      height: calc(88vh - 5px);
+    }
+  
+    @media screen and (max-height: 450px) {
+      height: calc(80vh - 5px);
     }
 
     width: 100vw;

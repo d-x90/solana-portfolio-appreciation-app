@@ -49,14 +49,14 @@ export const initWallet = (
       if (window.solana?.isPhantom) {
         wallet = window.solana;
       } else {
-        toast.error('Phantom not installed');
+        toast.error('Phantom is not installed');
       }
       break;
     case WalletType.Solflare:
       if (window.solflare?.isSolflare) {
         wallet = window.solflare;
       } else {
-        toast.error('SolFlare not installed');
+        toast.error('Solflare is not installed');
       }
       break;
   }
