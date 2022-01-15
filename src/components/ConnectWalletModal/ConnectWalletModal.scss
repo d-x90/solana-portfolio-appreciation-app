@@ -1,4 +1,4 @@
-.modal {
+.connect-wallet-modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -16,22 +16,45 @@
   }
 
   @media screen and (max-width: 862px) {
-    width: 50vw;
+    width: 60vw;
     height: 40vh;
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 450px) {
     width: 80vw;
+  }
+  
+  @media screen and (max-width: 450px) {
+    width: initial;
   }
 
   background-color: black;
   border: 2px solid grey;
   border-radius: 4px;
 
+  .cancel-button {
+    position: fixed;
+    color: white;
+    top: 4px;
+    right: 12px;
+    font-size: 1.4rem;
+    cursor: pointer;
+
+    &:hover {
+      color: red;
+    }
+  }
+
   h1 {
     font-size: 3rem;
     color: white;
     margin-bottom: 32px;
+
+    white-space: nowrap;
+    @media screen and (max-width: 450px) {
+      margin-left: 32px;
+      margin-right: 32px;
+    }
   }
 
   .buttons {
@@ -51,7 +74,7 @@
   }
 }
 
-.modalBackground {
+.modal-background {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);

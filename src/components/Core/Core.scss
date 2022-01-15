@@ -1,20 +1,16 @@
 @import 'atropos/scss';
 
 .core {
-  width: 65vh;
-  height: 65vh;
+  width: 90%;
+  height: 90%;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 577px) {
+  @media screen and (max-width: 577px) {
     width: 95vw;
     height: 95vw;
-  }
-
-  @media screen and (max-width: 472px) {
-    margin-top: 10%;
   }
 
   > .my-atropos {
@@ -28,8 +24,18 @@
     }
 
     .moving-container {
-      width: 80%;
-      height: 80%;
+      width: 50vmin;
+      height: 50vmin;
+
+      @media screen and (max-width: 577px) {
+        width: 90%;
+        height: 90%;
+      }
+
+      @media screen and (max-height: 577px) {
+        width: 90%;
+        height: 90%;
+      }
 
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;

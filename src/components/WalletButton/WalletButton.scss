@@ -1,21 +1,8 @@
 .wallet-button {
-  background-color: transparent;
-  padding: 6px 12px;
-  border: 2px solid white;
-  color: white;
-  box-shadow: none;
-  transition: background-color ease-in 0.1s, transform ease-in 0.3s;
-  border-radius: 4px;
-
-  font-weight: bold;
-
-  cursor: pointer;
-
   &.not-connected {
     animation: winkwink 10s ease-in 6s infinite;
   }
 
-  &:hover,
   &.connected {
     background-color: white;
     color: black;
@@ -24,22 +11,6 @@
 
     border-image-slice: 1;
     border-width: 3px;
-  }
-
-  &:hover {
-    animation: hover 0.3s ease-in 0s 1;
-
-    @keyframes hover {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
   }
 
   @keyframes winkwink {

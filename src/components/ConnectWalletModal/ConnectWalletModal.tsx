@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { createPortal } from 'react-dom';
 import { WalletType } from '../../solana';
+import Button from '../Button/Button';
 import './ConnectWalletModal.scss';
 
 export interface ModalProps {
@@ -11,28 +12,20 @@ export interface ModalProps {
 const ConnectWalletModal: FC<ModalProps> = ({ onClose, onConnect }) => {
   return createPortal(
     <div
-      className="modalBackground"
+      className="modal-background"
       onClick={(event) => {
         event.stopPropagation();
         onClose();
       }}
     >
-      <div className="modal" onClick={(e) => e.stopPropagation()}>
+      <div className="connect-wallet-modal" onClick={(e) => e.stopPropagation()}>
+        <span className='cancel-button' onClick={onClose}>x</span>
         <h1>Select wallet</h1>
         <div className="buttons">
-          <button
-            className="wallet-button"
-            onClick={() => onConnect(WalletType.Phantom)}
-          >
-            Phantom
-          </button>
-
-          <button
-            className="wallet-button"
-            onClick={() => onConnect(WalletType.Solflare)}
-          >
+          <Button onClick={() => onConnect(WalletType.Phantom)}>Phantom</Button>
+          <Button onClick={() => onConnect(WalletType.Solflare)}>
             Solflare
-          </button>
+          </Button>
         </div>
       </div>
     </div>,

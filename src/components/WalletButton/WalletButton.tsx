@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { checkWallet, getWallet, initWallet, WalletType } from '../../solana';
+import Button from '../Button/Button';
 import ConnectWalletModal from '../ConnectWalletModal/ConnectWalletModal';
 import './WalletButton.scss';
 
@@ -31,8 +32,8 @@ const WalletButton = () => {
   };
 
   return (
-    <button
-      className={`wallet-button ${isConnected ? 'connected' : 'not-connected'}`}
+    <Button
+      className={`wallet-button button ${isConnected ? 'connected' : 'not-connected'}`}
       onClick={async () => {
         if (isConnected) {
           wallet.current.disconnect();
@@ -49,7 +50,7 @@ const WalletButton = () => {
       {isModalOpen ? (
         <ConnectWalletModal onClose={handleClose} onConnect={handleConnect} />
       ) : null}
-    </button>
+    </Button>
   );
 };
 

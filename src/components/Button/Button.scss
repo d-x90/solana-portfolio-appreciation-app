@@ -1,0 +1,36 @@
+.button {
+  background-color: transparent;
+  padding: 6px 12px;
+  border: 2px solid white;
+  color: white;
+  box-shadow: none;
+  transition: background-color ease-in 0.1s, transform ease-in 0.3s;
+  border-radius: 4px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    color: black;
+
+    border-image-source: linear-gradient(to right, #8540df, #02b67e);
+
+    border-image-slice: 1;
+    border-width: 2px;
+    animation: hover 0.3s ease-in 0s 1 !important;
+
+    @keyframes hover {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+}
